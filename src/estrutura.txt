@@ -1,0 +1,38 @@
+User
+    user_name: string
+    password: string
+    email: string
+
+MyLists = {
+    player_name: string
+    Commander : string
+    Partner: string
+    Wins: number
+    Loses: number
+    Draws: string
+    Link: string
+}
+
+Championship
+    name_championship: String
+    Org: string
+    date: Date
+    Decks = {}
+       
+Decks = {
+    player_name: string
+    Commander : string
+    Partner: string
+    Wins: number
+    Loses: number
+    Draws: number
+    Link: string
+}
+
+
+UserRoutes = {
+    get
+    post
+    put
+    patch
+}

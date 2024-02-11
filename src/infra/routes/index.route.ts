@@ -1,3 +1,3 @@
-import router from './initial.route';
+import UserRoute from './user.route';
 
-export default [router];
+export default [UserRoute];

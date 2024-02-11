@@ -1,5 +1,5 @@
 import express from 'express';
-import router from './infra/routes/index.route';
+import UserRoute from './infra/routes/index.route';
 
 // const App = express();
 
@@ -22,7 +22,7 @@ class App {
     }
 
     private routes(){
-        this.server.use(...router);
+        this.server.use(...UserRoute);
     }
 }
 
