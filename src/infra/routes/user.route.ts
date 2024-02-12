@@ -1,13 +1,13 @@
-import { Request, Response, Router } from 'express';
+import { Router } from 'express';
 import CreateUser from '../../app/controller/user/CreateUserController';
+import GetAllUserController from '../../app/controller/user/GetAllUserController';
+import UserPostValidarion from '../../app/middlewares/validations/UserPostValidarion';
 
 const router = Router();
 
-router.get('/user', (req: Request, res: Response)=>{
-    return res.send('ola devs');
-});
+router.post('/user', UserPostValidarion, CreateUser.post);
+router.get('/user', GetAllUserController.get);
 
-router.post('/user', CreateUser.post);
 
 
 export default router;

@@ -1,11 +1,12 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
+import UserServiceCreate from '../../service/user/CreateUserService';
 
 class CreateUser {
 
     async post(req: Request, res: Response){
         try {
-            const result = req.body;
+            const result = UserServiceCreate.post(req.body);
             return res.status(StatusCodes.CREATED).json({result});
             
         } catch (error) {
