@@ -2,9 +2,11 @@ User
     user_name: string
     password: string
     email: string
+    myDecks = []
 
-MyLists = {
+MyDecks = {
     player_name: string
+    data: Date
     Commander : string
     Partner: string
     Wins: number
@@ -14,6 +16,7 @@ MyLists = {
 }
 
 Championship
+    user
     name_championship: String
     Org: string
     date: Date
@@ -30,9 +33,17 @@ Decks = {
 }
 
 
-UserRoutes = {
-    get
-    post
-    put
-    patch
+User_Routes = {
+    get: /user
+    post: /user
+    put: /user/:userId
+    patch: /user/:userId
+    delete: /user/:userId
+}
+
+My_Lists_Routes = {
+    post: /mylists
+    put: /mylists/:mylists
+    patch: /mylists/:mylists
+    delete: /mylists/:mylists
 }
