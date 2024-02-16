@@ -1,9 +1,8 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import UserServiceCreate from '../../service/user/CreateUserService';
+import UserServiceCreate from '../../service/user/PostService';
 
 class CreateUser {
-
     async post(req: Request, res: Response){
         try {
             const result = UserServiceCreate.post(req.body);

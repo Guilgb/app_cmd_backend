@@ -2,6 +2,7 @@ import type { PaginateModel } from 'mongoose';
 import { Schema, model } from 'mongoose';
 import paginate from 'mongoose-paginate-v2';
 import uniqueValidator from 'mongoose-unique-validator';
+import './MyDecksSchema';
 
 
 

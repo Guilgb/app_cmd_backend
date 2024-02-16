@@ -1,10 +1,10 @@
 import { IUser, IUserResponse } from '../../interfaces/iUser';
-import CreateUserRepository from '../../repositories/user/CreateUserRepository';
+import Post from '../../repositories/user/Post';
 
 class UserServiceCreate{
     async post(req: IUser): Promise<IUserResponse>{
 
-        const result = await CreateUserRepository.post(req);
+        const result = await Post.post(req);
         return result;
     }
 }

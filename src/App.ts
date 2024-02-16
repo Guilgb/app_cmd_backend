@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import UserRoute from './infra/routes/index.route';
+import routes from './infra/routes/index.route';
 import './infra/database/database';
 
 class App {
@@ -16,8 +16,8 @@ class App {
     }
 
 
-    private middlewares(): void {
-        this.server.use(express.json({}));
+    public middlewares(): void {
+        this.server.use(express.json());
         this.server.use(
             express.urlencoded({
                 extended: true,
@@ -27,8 +27,9 @@ class App {
     }
 
     private routes(){
-        this.server.use(...UserRoute);
+        this.server.use(...routes);
     }
+    
 }
 
 export default App;

@@ -6,11 +6,12 @@ class GetAllUserRepository{
     async get(page: number, limit: number): Promise<PaginateResult<IUserResponse>>{
         const options = {
             select: '-password',
-            populate: { path: 'Users', model: 'User' },
+            // populate: { path: 'deck', model: 'Decks' },
         };
         const result = await UserSchema.paginate({}, { page, limit, ...options });
         return result;
     }
+    
 }
 
 export default new GetAllUserRepository();
