@@ -2,7 +2,7 @@ import type { PaginateModel } from 'mongoose';
 import { Schema, model } from 'mongoose';
 import paginate from 'mongoose-paginate-v2';
 import uniqueValidator from 'mongoose-unique-validator';
-import './MyDecksSchema';
+import './DecksSchema';
 
 
 
@@ -14,10 +14,10 @@ const schema = new Schema<IUser>(
         name: {type: String, required: true, minlength: 3, maxlength: 50},
         password: {type: String, required: true, minlength: 6},
         email: {type: String, required: true, unique: true},
-        mydecks: [
+        decks: [
             {
-                type: Schema.ObjectId,
-                ref: 'myDecks'
+                type: Schema.Types.ObjectId,
+                ref: 'Decks'
             }
         ],
         

@@ -1,5 +1,5 @@
 import { IDeck, IDeckResponse } from '../../interfaces/iDeck';
-import DeckSchema from '../../schemas/MyDecksSchema';
+import DeckSchema from '../../schemas/DecksSchema';
 
 class UpdateRepositories{
     async update(id: string, payload: IDeck):Promise<IDeckResponse | null>{

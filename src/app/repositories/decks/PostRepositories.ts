@@ -1,4 +1,4 @@
-import DeckSchema from '../../schemas/MyDecksSchema';
+import DeckSchema from '../../schemas/DecksSchema';
 import { IDeck, IDeckResponse } from '../../interfaces/iDeck';
 
 class PostRepositories{

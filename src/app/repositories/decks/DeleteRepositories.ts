@@ -1,5 +1,5 @@
 import { IDeckResponse } from '../../interfaces/iDeck';
-import DeckSchema from '../../schemas/MyDecksSchema';
+import DeckSchema from '../../schemas/DecksSchema';
 
 class DeleteRepositories{
     async delete(id: string):Promise<IDeckResponse | null>{

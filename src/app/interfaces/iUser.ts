@@ -4,7 +4,7 @@ export interface IUser {
   name: string;
   password: string | undefined;
   email: string;
-  mydecks?: Types.ObjectId[];
+  decks?: Types.ObjectId[];
 }
 
 export interface IUserResponse {
