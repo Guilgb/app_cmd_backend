@@ -1,11 +1,11 @@
 import UserSchema from '../../schemas/UserSchema';
 import { IUser } from '../../interfaces/iUser';
 
-class Post{
+class PostRepositories{
     async post(req: IUser):Promise<IUser>{
         return await UserSchema.create(req);
     }
 }
 
 
-export default new Post();
+export default new PostRepositories();

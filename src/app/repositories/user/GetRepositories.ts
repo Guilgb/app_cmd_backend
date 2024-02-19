@@ -2,11 +2,11 @@ import type { PaginateResult } from 'mongoose';
 import { IUserResponse } from '../../interfaces/iUser';
 import UserSchema from '../../schemas/UserSchema';
 
-class GetAllUserRepository{
+class GetRepositories{
     async get(page: number, limit: number): Promise<PaginateResult<IUserResponse>>{
         const options = {
             select: '-password',
-            // populate: { path: 'deck', model: 'Decks' },
+            // populate: { path: 'decks', model: 'Deck' },
         };
         const result = await UserSchema.paginate({}, { page, limit, ...options });
         return result;
@@ -14,4 +14,4 @@ class GetAllUserRepository{
     
 }
 
-export default new GetAllUserRepository();
+export default new GetRepositories();

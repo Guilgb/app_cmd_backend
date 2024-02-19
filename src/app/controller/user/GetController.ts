@@ -3,7 +3,7 @@ import { StatusCodes } from 'http-status-codes';
 import GetAllUsersService from '../../service/user/GetService';
 
 
-class GetAllUserController{
+class GetController{
     async get(req: Request, res: Response): Promise<Response>{
         try {
             console.log(req.url);
@@ -14,4 +14,4 @@ class GetAllUserController{
         }
     }
 }
-export default new GetAllUserController();
+export default new GetController();

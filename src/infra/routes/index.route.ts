@@ -1,3 +1,4 @@
 import UserRoute from './user.route';
+import DeckRoute from './deck.route';
 
-export default [UserRoute];
+export default [UserRoute, DeckRoute];

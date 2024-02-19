@@ -1,5 +1,5 @@
 import { IUserPaginate } from '../../interfaces/iUser';
-import GetAllUserRepository from '../../repositories/user/Get';
+import GetRepositories from '../../repositories/user/GetRepositories';
 
 class GetAllUsersService{
 
@@ -20,7 +20,7 @@ class GetAllUsersService{
             validateLimit = 10;
         }
   
-        const users = await GetAllUserRepository.get(validatePage, validateLimit);
+        const users = await GetRepositories.get(validatePage, validateLimit);
         return users;
     }
 }
