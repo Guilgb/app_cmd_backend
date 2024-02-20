@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import UpdateService from '../../service/user/UpdateService';
+import UpdateService from '../../service/user/UpdateUserService';
 
 
 class UpdateUser {
