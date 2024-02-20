@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import PostService from '../../service/deck/PostService';
+import PostService from '../../service/deck/PostDeckService';
 
 class PostUser {
     async post(req: Request, res: Response){
