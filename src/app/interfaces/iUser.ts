@@ -12,7 +12,7 @@ export interface IUserResponse {
   name: string;
   password?: string;
   email: string;
-  mydecks?: Types.ObjectId[];
+  decks?: Types.ObjectId[];
 }
 
 export interface IUserPasswordResponse {
