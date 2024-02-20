@@ -1,6 +1,6 @@
 import { isValidObjectId } from 'mongoose';
 import { IUserResponse } from '../../interfaces/iUser';
-import DeleteUserRepositories from '../../repositories/user/DeleteRepositories';
+import DeleteUserRepositories from '../../repositories/user/DeleteUserRepositories';
 import GetDeckById from '../../repositories/user/GetDeckById';
 
 
