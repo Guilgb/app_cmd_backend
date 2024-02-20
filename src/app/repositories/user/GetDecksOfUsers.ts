@@ -3,7 +3,7 @@ import UserSchema from '../../schemas/UserSchema';
 
 class GetDecksOfUsers{
     async getDecksOfUsers(query: {
-        id: string,
+        _id: string,
         decks: string
     }): Promise<IUserResponse | null>{
         const result = await UserSchema.findOne(query);

@@ -10,8 +10,8 @@ const router = Router();
 router.post('/user', UserPostValidarion, PostUser.post);
 router.get('/user', GetController.get);
 router.put('/user/:userId', UpdateController.update);
-router.patch('/user/:userId');
 router.delete('/user/:userId', DeleteUserController.delete);
+router.patch('/user/:userId');
 
 
 
