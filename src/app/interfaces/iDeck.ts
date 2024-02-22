@@ -2,6 +2,7 @@ import type { Types } from 'mongoose';
 
 export interface IDeck {
     name_deck: string
+    format: string
     data: Date
     Commander : string
     Partner?: string
@@ -14,6 +15,7 @@ export interface IDeck {
 export interface IDeckResponse {
     _id?: Types.ObjectId;
     name_deck: string
+    format: string
     data: Date
     Commander : string
     Partner?: string
