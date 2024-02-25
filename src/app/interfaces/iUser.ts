@@ -32,3 +32,8 @@ export interface IUserPaginate {
   prevPage?: number | null | undefined;
   nextPage?: number | null | undefined;
 }
+
+export interface IUserPasswordResponse {
+  _id: Types.ObjectId;
+  password: string;
+}

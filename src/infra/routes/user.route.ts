@@ -4,14 +4,15 @@ import UserPostValidarion from '../../app/middlewares/validations/UserPostValida
 import GetController from '../../app/controller/user/GetUserController';
 import UpdateController from '../../app/controller/user/UpdateUserController';
 import DeleteUserController from '../../app/controller/user/DeleteUserController';
+import AuthVerify from '../../app/middlewares/AuthVerify';
 
 const router = Router();
 
 router.post('/user', UserPostValidarion, PostUser.post);
-router.get('/user', GetController.get);
-router.put('/user/:userId', UpdateController.update);
-router.delete('/user/:userId', DeleteUserController.delete);
-router.patch('/user/:userId');
+router.get('/user', AuthVerify, GetController.get);
+router.put('/user/:userId', AuthVerify, UpdateController.update);
+router.delete('/user/:userId', AuthVerify, DeleteUserController.delete);
+router.patch('/user/:userId', AuthVerify);
 
 
 
