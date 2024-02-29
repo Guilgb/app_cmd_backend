@@ -26,7 +26,7 @@ class AutService {
             }
         );
 
-        const result = { access_token: auth, email: payload.email, password: payload.password, _id: payload._id};
+        const result = { access_token: auth, email: payload.email, password: payload.password, _id: user._id};
         return result;
     }
 }
